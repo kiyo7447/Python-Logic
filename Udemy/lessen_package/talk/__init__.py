@@ -1,0 +1,1 @@
+﻿print("__init__ human")
