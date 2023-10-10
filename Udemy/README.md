@@ -154,5 +154,17 @@ mysql> SHOW GLOBAL VARIABLES LIKE '%timeout%';
 # install mysql-connector-python
 pip install mysql-connector-python==8.1.0
 ```
+
+
+# SQL Alchemyを使う
+
+```
+pip install SQLAlchemy
+
+pip install pymysql
+
+```
+# dbmを使う
+
 ## TODO
 SQL Alchemyをやってみ
