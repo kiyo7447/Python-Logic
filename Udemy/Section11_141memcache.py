@@ -29,19 +29,39 @@ curs.execute(
     'CREATE TABLE IF NOT EXISTS persons('
     'employ_id INTEGER PRIMARY KEY AUTOINCREMENT, '
     'name STRING)')
+
+# dataを削除
+curs.execute('DELETE FROM persons')
+
 # データを追加
-for i in range(10):
+for i in range(1000):
     curs.execute(
-        'INSERT INTO persons(name) values("Mike")')
+        f'INSERT INTO persons(name) values("Mike{i}")')
 
 # データを取得
 curs.execute('SELECT * FROM persons')
 print(f"persons: {curs.fetchall()}")
 
+def get_employ_id(name):
+    employ_id = db.get(name)
+    if employ_id:
+        # memcacheにあればそれを返す
+        print('get from memcache')
+        return employ_id
+    # memcacheになければDBから取得
+    curs.execute(f'SELECT * FROM persons WHERE name="{name}"')
+    person = curs.fetchone()
+    if not person:
+        # DBにもなければNoneを返す
+        #return None
+        raise Exception('No employ')
+    employ_id, name = person
+    db.set(name, employ_id, time=60)
+    return employ_id
+
+print(get_employ_id('Mike69'))
 
 # コミット
 conn.commit()
 # 接続を閉じる
 conn.close()
-
-
