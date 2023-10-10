@@ -165,6 +165,10 @@ pip install pymysql
 
 ```
 # dbmを使う
-
-## TODO
-SQL Alchemyをやってみ
+## サーバ側の準備
+https://github.com/kiyo7447/Local-Databases/tree/main/memcached
+## 端末側の準備
+```bash
+pip install python-memcached
+```
+# TODO
