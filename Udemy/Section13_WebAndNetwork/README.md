@@ -33,3 +33,13 @@ soup = BeautifulSoup(html_content, 'html5lib')
 
 これらの選択肢の中から、プロジェクトの要件に最も適したものを選んでください。
 
+# networkx
+* 公式サイト: https://networkx.org/
+* ドキュメント: https://networkx.org/documentation/stable/
+* GitHub: https://github.com/networkx/networkx
+* ギャラリー: https://networkx.org/documentation/stable/auto_examples/index.html
+## インストール
+```bash
+pip install networkx
+pip install matplotlib
+```
