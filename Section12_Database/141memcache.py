@@ -50,6 +50,7 @@ curs.execute('SELECT * FROM persons')
 print(f"personsの全件を出力する: {curs.fetchall()}")
 
 def get_employ_id(name):
+    # エラー処理がないので、そのまま使えない。
     employ_id = db.get(name)
     if employ_id:
         # memcacheにあればそれを返す
