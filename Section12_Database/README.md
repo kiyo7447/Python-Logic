@@ -162,11 +162,46 @@ https://github.com/kiyo7447/Local-Databases/tree/main/memcached
 pip install python-memcached
 ```
 # memcached
+## サーバの準備
 https://github.com/kiyo7447/Local-Databases/tree/main/memcached
+## ソースコード
+DBの前に立てて、キャッシュサーバの役割を果たす。
+# MongoDB
+## サーバの準備
+https://github.com/kiyo7447/Local-Databases/tree/main/MongoDB
+## ソースコード
+### 集計機能を提供するAggregation Pipelineを使う
+MongoDBのAggregationsは、データの変換と組み合わせを行うためのフレームワークです。これにより、データの処理と分析を行い、計算された結果を得ることができます。Aggregationsは、データのグループ化、フィルタリング、変換など、多くの操作を実行できる非常に強力で柔軟なツールを提供します。
+
+MongoDBのAggregationsは主に以下の3つの方法で実行できます:
+
+1. **Aggregation Pipeline**:
+   - この方法では、データは複数のステージを通過し、各ステージで特定の操作が実行されます。ステージは連鎖的に実行され、一つのステージの出力は次のステージの入力となります。これにより、データのフィルタリング、変換、ソート、グループ化など、複雑なデータ処理を実行できます。
+
+2. **Map-Reduce**:
+   - Map-Reduceは、大量のデータを処理し、集計するためのスケーラブルな方法を提供します。Map関数とReduce関数を使用して、キーと値のペアを生成し、集計します。
+
+3. **Single Purpose Aggregation Methods**:
+   - これらは特定の単一目的の集計タスクを実行するためのシンプルなメソッドです。例えば、`db.collection.count()`や`db.collection.distinct()`などがあります。
+
+以下は、Aggregation Pipelineを使用した簡単な例です:
+
+```javascript
+# ステータスがAの売上金額を集計する
+result = col.aggregate([
+   { "$match": { "status": "A" } },
+   { "$group": { "_id": "$status", "total": { "$sum": "$price" } } }
+])
+```
+
+この例では、まず`$match`ステージで`status`が"A"であるドキュメントをフィルタリングし、次に`$group`ステージで顧客ID(`cust_id`)ごとに注文金額を合計しています。
+
+Aggregationsは、データ分析、レポート生成、データクレンジング、データ変換など、多くのユースケースにおいて非常に役立ちます。
+
+
 # TODO
 # DBM
 # pickle
-# MongoDB
 # Hbase
 # neo4j
 
