@@ -13,10 +13,10 @@ data = {
     'e': T('test')
 }
 
-with open('Section11_142pickle.pickle', 'wb') as f:
+with open('142pickle.pickle', 'wb') as f:
     pickle.dump(data, f)
 
-with open('Section11_142pickle.pickle', 'rb') as f:
+with open('142pickle.pickle', 'rb') as f:
     data_loaded = pickle.load(f)
     print(f"data_loaded: {data_loaded}")
     print(f"data_loaded['a']: {data_loaded['a']}")

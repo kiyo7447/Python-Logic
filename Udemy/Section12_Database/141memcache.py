@@ -22,7 +22,7 @@ print(f"counter: {db.get('counter')}")
 
 
 # sqlite3のテスト
-conn = sqlite3.connect('Section11_141memcache.db')
+conn = sqlite3.connect('141memcache.db')
 curs = conn.cursor()
 # poersonsテーブルを作成
 curs.execute(
