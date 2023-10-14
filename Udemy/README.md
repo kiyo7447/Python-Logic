@@ -1,14 +1,8 @@
 # 何処の情報をまとめたのか？
-
-UdemyのPython講座を受講した時のメモをまとめたものです。
-現役シリコンバレーエンジニアが教えるPython 3 入門 + 応用 +アメリカのシリコンバレー流コードスタイル
+UdemyのPython講座を受講した時のメモをまとめたものです。  
+現役シリコンバレーエンジニアが教えるPython 3 入門 + 応用 +アメリカのシリコンバレー流コードスタイル  
 https://tmnets.udemy.com/course/python-beginner/learn/lecture/8509966?learning_path_id=4835268#overview
-
 https://tmnets.udemy.com/course/python-beginner/learn/lecture/8393044?learning_path_id=4835268#overview
-
-GitHub
-
-
 
 # Pythonの文字化け調査
 Visual Studio Code (VSCode)では、一部の設定を調整することで文字化け問題を解消できる場合があります。以下のステップを試してみてください。
@@ -70,4 +64,3 @@ pip install flake8
 チェックは厳しい  
 pip install  
 pylint
-
