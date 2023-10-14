@@ -17,7 +17,7 @@ print(sqlalchemy.__version__)
 
 #engine = sqlalchemy.create_engine('sqlite:///:memory:', echo=False)
 # SQLiteのファイルエンジンを用意する
-#engine = sqlalchemy.create_engine('sqlite:///Session11_139SQLAlchemy.db', echo=False)
+#engine = sqlalchemy.create_engine('sqlite:///139SQLAlchemy.db', echo=False)
 
 # MySQLのエンジンを用意する
 engine = sqlalchemy.create_engine('mysql+pymysql://root:password@localhost:3306/mydatabase', echo=False)

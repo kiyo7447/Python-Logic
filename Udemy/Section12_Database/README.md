@@ -162,3 +162,10 @@ https://github.com/kiyo7447/Local-Databases/tree/main/memcached
 pip install python-memcached
 ```
 # TODO
+# DBM
+# memcached
+# pickle
+# MongoDB
+# Hbase
+# neo4j
+
