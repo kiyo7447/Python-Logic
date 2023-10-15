@@ -164,6 +164,7 @@ pip install python-memcached
 # memcached
 ## サーバの準備
 https://github.com/kiyo7447/Local-Databases/tree/main/memcached
+
 ## ソースコード
 DBの前に立てて、キャッシュサーバの役割を果たす。
 # MongoDB
@@ -197,11 +198,10 @@ result = col.aggregate([
 この例では、まず`$match`ステージで`status`が"A"であるドキュメントをフィルタリングし、次に`$group`ステージで顧客ID(`cust_id`)ごとに注文金額を合計しています。
 
 Aggregationsは、データ分析、レポート生成、データクレンジング、データ変換など、多くのユースケースにおいて非常に役立ちます。
-
+# Hbase
+う～ん。Pythonでうまく動かない。。。
 
 # TODO
 # DBM
 # pickle
-# Hbase
 # neo4j
-
