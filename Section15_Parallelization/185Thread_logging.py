@@ -24,7 +24,7 @@ if __name__ == '__main__':
     )
 
     logging.debug("start")
-
+    # args, kwargsを指定する。kwargsはDictionary型で指定する。
     t1 = threading.Thread(target=worker1, name="t1", args=(99, 98))
     t2 = threading.Thread(target=worker2, name="t2", args=(100,), kwargs={'y': 200})
     t1.start()
