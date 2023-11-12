@@ -65,8 +65,17 @@ def prime_factorization(n):
         factors.append(n)
     return factors
 
-for i in enumerate_smith_numbers(100):
+for i in enumerate_smith_numbers(100000):
     print(f'num:{i} factor:{prime_factorization(i)}')
+
+
+i = 49_377_775
+print(f'{i} is smith: {is_smith_number(i)}')
+i = 5_000_011 
+print(f'{i} is smith: {is_smith_number(i)}')
+i = 50_000_017
+print(f'{i} is smith: {is_smith_number(i)}')
+
 
 """
 num:4 factor:[2, 2]
